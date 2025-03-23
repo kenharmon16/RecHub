@@ -9,7 +9,6 @@ import java.util.List;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class RAWGGenreResultItem {
     private int id;
     @NonNull

@@ -14,13 +14,13 @@ public class RAWGAPIService {
     private final RestTemplate restTemplate;
 
     @Value("${rawg.url}")
-    String rawgBaseUrl;
+    private String rawgBaseUrl;
 
     @Value("${rawg.endpoints.genres}")
-    String rawgGenresEndpoint;
+    private String rawgGenresEndpoint;
 
     @Value("${rawg.apiKey}")
-    String apiKey;
+    private String apiKey;
 
     @Autowired
     public RAWGAPIService(RestTemplate restTemplate) {
@@ -34,6 +34,10 @@ public class RAWGAPIService {
 
         try {
             response = restTemplate.getForEntity(rawgUrl, RAWGAPIGenreResponse.class);
+            RAWGAPIGenreResponse responseBody = response.getBody();
+            if (responseBody != null) {
+                responseBody.setMessage("Successfully fetched genres");
+            }
             return ResponseEntity.ok(response.getBody());
         } catch (Exception e) {
             RAWGAPIGenreResponse failureResponse = new RAWGAPIGenreResponse();
