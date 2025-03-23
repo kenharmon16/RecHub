@@ -8,9 +8,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 
 @SpringBootTest
-@ActiveProfiles("local")
-// TO-DO look into this test configuration
-@ContextConfiguration(classes = {RestTemplateConfig.class})
+@ActiveProfiles("test")
 class RechubApplicationTests {
 
 	@Test
