@@ -1,0 +1,4 @@
+
+rawg:
+  apiKey:
+    ${RAWG_API_KEY}
