@@ -1,1 +1,1 @@
-web: mvn clean package && java -jar target/rechub-0.0.1-SNAPSHOT.jar
+web: echo "Docker deployment, no Procfile needed"
