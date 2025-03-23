@@ -2,7 +2,7 @@ build:
   docker:
     web: Dockerfile
 release:
-  command: java -jar rechub-0.0.1-SNAPSHOT.jar
+  command: java -jar app.jar
 run:
   web:
-    java -jar rechub-0.0.1-SNAPSHOT.jar
+    java -jar app.jar
