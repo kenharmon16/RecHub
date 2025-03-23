@@ -2,7 +2,9 @@
 FROM openjdk:17-jdk-slim
 
 # Information around who maintains the image
-MAINTAINER Ken Harmon
+LABEL authors=KenHarmon
+
+ENV RAWG_API_KEY=${RAWG_API_KEY}
 
 # Add the application's jar to the image
 COPY target/rechub-0.0.1-SNAPSHOT.jar rechub-0.0.1-SNAPSHOT.jar
