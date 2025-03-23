@@ -1,0 +1,5 @@
+
+rawg:
+  url: https://api.rawg.io/
+  endpoints:
+    genres: api/genres
