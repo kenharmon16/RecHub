@@ -8,9 +8,10 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 
 @SpringBootTest
-@ActiveProfiles("test")
+@ActiveProfiles("local")
 class RechubApplicationTests {
 
+    //TODO: look into not using local profile
 	@Test
 	void contextLoads() {
 	}

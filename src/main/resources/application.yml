@@ -1,4 +1,18 @@
+#spring:
+#  devtools:
+#    add-properties: false
+#  profiles:
+#    active: local
 
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb: DEBUG
+    com:
+      mongodb: DEBUG
 rawg:
   url: https://api.rawg.io/
   endpoints:
